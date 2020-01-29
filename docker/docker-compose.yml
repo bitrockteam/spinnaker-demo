@@ -3,6 +3,9 @@ services:
   makepkg:
     container_name: makepkg
     image: makepkg
+    command: /opt/makepkg/build.sh
+    environment:
+      PKG_NAME: ${PKG_NAME}
     volumes:
      - type: bind
        source: $PWD
@@ -10,4 +13,3 @@ services:
        read_only: false
     build:
      context: ./makepkg
-
