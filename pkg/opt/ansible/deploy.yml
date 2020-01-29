@@ -1,0 +1,9 @@
+---
+- name: Configure Environment
+  hosts: local
+  tasks:
+    - name: Start Apache
+      systemd:
+        name: httpd
+        state: started
+        enabled: yes
