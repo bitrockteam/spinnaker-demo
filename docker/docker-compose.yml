@@ -6,6 +6,7 @@ services:
     command: /opt/makepkg/build.sh
     environment:
       PKG_NAME: ${PKG_NAME}
+      PKG_VERSION: ${PKG_VERSION}
     volumes:
      - type: bind
        source: $PWD
