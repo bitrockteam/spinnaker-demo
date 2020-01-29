@@ -1,0 +1,13 @@
+version: '3.7'
+services:
+  makepkg:
+    container_name: makepkg
+    image: makepkg
+    volumes:
+     - type: bind
+       source: $PWD
+       target: /opt/makepkg
+       read_only: false
+    build:
+     context: ./makepkg
+
